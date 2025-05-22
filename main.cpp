@@ -60,24 +60,24 @@ int main() {
 
         if ((ut % 2) & (continua)) {
             if (FP1 != NULL) {
-                cout << "------------------------Unidade de tempo: " << ut << "--------------------------\n"<<endl;
+                cout << "========================Unidade de tempo: " << ut << "================================================\n"<<endl;
                 FP1 = removeFP(FP1, &aviaoP, &prioridade);
                 if (prioridade == 1) {
-                    cout << "Pista 1 sendo utilizada por (AVIAO: " << aviaoP << ") para pouso com prioridade alta." << endl << "\nEspera para proxima (POUSO): aproximadamente 1 UTs\n" <<endl;   
+                    cout << "Pista 1 sendo utilizada por (AVIAO: " << aviaoP << ") para pouso com prioridade alta." << endl << "\nEspera para proxima (POUSO): aproximadamente 1 UTs\n__________________________________________________" <<endl;   
                 } else {
-                    cout << "Pista 1 sendo utilizada por (AVIAO: " << aviaoP << ") para pouso." << endl << "\nEspera para proxima (POUSO): aproximadamente 1 UTs\n" <<endl;   
+                    cout << "Pista 1 sendo utilizada por (AVIAO: " << aviaoP << ") para pouso." << endl << "\nEspera para proxima (POUSO): aproximadamente 1 UTs\n__________________________________________________" <<endl;   
                 }         
             }else {
-                cout << "------------------------Unidade de tempo: " << ut << "--------------------------\n"<<endl;
+                cout << "========================Unidade de tempo: " << ut << "================================================\n"<<endl;
                 cout << "Pista 1 esta vazia." <<endl;
                 if ((FP2 == NULL) & (ut % 2)) {
                     continua = 0;
                 } 
             }
         } else {
-            cout << "------------------------Unidade de tempo: " << ut << "--------------------------"<<endl;
+            cout << "========================Unidade de tempo: " << ut << "================================================"<<endl;
             if ((FP1 != NULL) || (ut % 2 != 0)) { /*Verifica se a FP2 está vazia e se deu tempo do avião terminar o pouso*/
-                cout << "(AVIAO: " << aviaoP << ") taxiando na pista 1." << endl << "Espera para proxima (POUSO): PROXIMA UT." <<endl;
+                cout << "(AVIAO: " << aviaoP << ") taxiando na pista 1." << endl << "\nEspera para proxima (POUSO): PROXIMA UT.\n__________________________________________________" <<endl;
             } else {
                 cout << "Pista 1 esta vazia." <<endl;
             }
@@ -86,7 +86,7 @@ int main() {
             if (FP2 != NULL) {
                 FP2 = removeFP(FP2, &aviaoD, &prioridade);
                 if (prioridade == 1) {
-                    cout << "Pista 2 sendo utilizada por (AVIAO: " << aviaoD << ") para decolagem com prioridade alta.\n" << endl <<"Espera para proxima (DECOLAGEM): aproximadamente 2 UTs.\n" <<endl;    
+                    cout << "Pista 2 sendo utilizada por (AVIAO: " << aviaoD << ") para decolagem com prioridade alta." << endl <<"\nEspera para proxima (DECOLAGEM): aproximadamente 2 UTs.\n__________________________________________________" <<endl;    
                 }
                 else {
                     cout << "Pista 2 sendo utilizada por (AVIAO: " << aviaoD << ") para decolagem.\n" << endl << "Espera para proxima (DECOLAGEM): aproximadamente 2 UTs\n" <<endl;   
@@ -99,7 +99,7 @@ int main() {
             }
         }else {
             if ((FP2 != NULL) || (ut % 3 != 0)) { /*Verifica se a FP2 está vazia e se deu tempo do avião terminar a decolagem*/
-                cout << "(AVIAO: " << aviaoD << ") taxiando na pista 2.\n" << endl <<"Espera para proximo (DECOLAGEM): aproximadamente 1 UTs\n" <<endl; 
+                cout << "(AVIAO: " << aviaoD << ") taxiando na pista 2." << endl <<"\nEspera para proximo (DECOLAGEM): aproximadamente 1 UTs\n__________________________________________________" <<endl; 
             } else {
                 cout << "Pista 2 esta vazia.\n" <<endl;
             }
