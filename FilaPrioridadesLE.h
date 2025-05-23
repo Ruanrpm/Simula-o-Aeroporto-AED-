@@ -6,6 +6,7 @@ struct no {
     int info;
     int prior;
     no *link;
+    int time = 0;
 };
 
 no *inicializaFP(no *L)
